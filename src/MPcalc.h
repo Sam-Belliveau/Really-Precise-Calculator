@@ -19,7 +19,7 @@ namespace calculator
         const char* numberChars = "0123456789.";
 
         const unsigned int bitP = 1 << 16;
-	}
+    }
 
     struct part
     {

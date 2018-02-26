@@ -6,7 +6,7 @@ int main()
 {
     std::cout << "---ULTIMATE CALCULATOR---" << std::endl << std::endl;
     std::cout << "Features:" << std::endl;
-    std::cout << "  -  500 Decimal Digits" << std::endl;
+    std::cout << "  -  2048 Decimal Digits" << std::endl;
     std::cout << "  -  REALLY BIG numbers" << std::endl << std::endl;
     std::cout << "WARNING: pi and e are estimates, do not rely on them being 100% correct" << std::endl << std::endl;
     std::cout << "Operators: ";

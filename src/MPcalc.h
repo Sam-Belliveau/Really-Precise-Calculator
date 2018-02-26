@@ -18,7 +18,7 @@ namespace calculator
 
         const char* numberChars = "0123456789.";
 
-        const unsigned int bitP = 1 << 16;
+        const unsigned int bitP = 1 << 20;
     }
 
     struct part
@@ -477,15 +477,16 @@ namespace calculator
 
         if(vLength == 0) { return "Error!"; }
         if(privateMath::cVector(0, vLength)){ return "Error!"; }
+        if(vLength != 1){ return "Error!"; }
         if(!input[0].isNum){ return "Error!"; }
 
         char* raw;
         mpfr_exp_t e;
         raw = mpfr_get_str(NULL, &e, 10, 0, input[0].num, MPFR_RNDN);
 
-        mpfr_sprintf(raw, "%.502RNf", input[0].num);
+        mpfr_sprintf(raw, "%.2048RNf", input[0].num);
 
-        unsigned int end = ((long) e) + 500;
+        unsigned int end = ((long) e) + 2048;
         for(; raw[end] == '0'; --end)
         raw[end+1] = '\0';
 
